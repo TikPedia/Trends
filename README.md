@@ -44,7 +44,7 @@
 
 ## :dart: About ##
 
-Describe your project
+Microservice used to extract the most researched terms on Google using pytrends library
 
 ## :sparkles: Features ##
 
@@ -56,7 +56,8 @@ Describe your project
 
 The following tools were used in this project:
 
-- [Python](https://expo.io/)
+- [Python](https://www.python.org/downloads/release/python-3110/)
+
 
 ## :white_check_mark: Requirements ##
 
