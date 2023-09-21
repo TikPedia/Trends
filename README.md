@@ -79,6 +79,13 @@ $ yarn
 $ yarn start
 
 # The server will initialize in the <http://localhost:3000>
+
+
+$MongoDB run docker
+
+docker compose up
+
+# Connection : mongodb://127.0.0.1:27017
 ```
 
 
