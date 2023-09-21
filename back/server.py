@@ -1,5 +1,6 @@
 from multiprocessing import Process
 from flask import Flask
+import uvicorn
 from pymongo import MongoClient
 from grabber import get_trends
 from typing import Any
@@ -22,4 +23,9 @@ def get_all():
     result = db.trends.find()
     return MongoJSONEncoder().encode(list(result))
 
-app.run()
+uvicorn.run(
+        "server.app:app",
+        host = "0.0.0.0",
+        port = 8000,
+        reload = True
+    )

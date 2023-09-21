@@ -3,3 +3,5 @@ pytrends
 pymongo
 flask
 schedule
+fastapi
+uvicorn[standard]
