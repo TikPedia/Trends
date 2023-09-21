@@ -4,8 +4,6 @@ services:
     image: mongo
     container_name: mongodb
     hostname: 0.0.0.0
-    volumes:
-    - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
     environment:
       - 0.0.0.0
     ports:

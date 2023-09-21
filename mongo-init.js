@@ -1,7 +1,9 @@
+db = db.getSiblingDB('trends');
+
 db.createUser(
     {
-        user: "root",
-        pwd: "root",
+        user: "trending",
+        pwd: "trending",
         roles: [
             {
                 role: "readWrite",

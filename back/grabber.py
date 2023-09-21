@@ -19,6 +19,7 @@ def get_trends():
 
 trend = get_trends()
 print(trend)
-client = MongoClient("localhost", port=27017, username='root', password='root')
+client = MongoClient("mongodb", port=27017)
 db = client['trends']
-db.trends.insert_one(trend)
+col = db['trends']
+col.trends.insert_one(trend)

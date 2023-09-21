@@ -1,7 +1,7 @@
 python-crontab
+uvicorn
 pytrends
 pymongo
 flask
 schedule
 fastapi
-uvicorn[standard]
