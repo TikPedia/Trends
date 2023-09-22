@@ -1,0 +1,7 @@
+class Trend:
+    def __init__(self):
+        self.data = {
+            "_id": None,
+            "time": datetime,
+            "keyword": []
+        }

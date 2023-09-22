@@ -15,7 +15,7 @@ class MongoJSONEncoder(json.JSONEncoder):
         return str(o) if isinstance(o, datetime) else json.JSONEncoder.default(self, o)
 
 app = Flask(__name__)
-client = MongoClient("mongodb", port=27017)
+client = MongoClient("localhost", port=27017)
 db = client['trends']
 col = db['trends']
 
@@ -23,10 +23,3 @@ col = db['trends']
 def get_all():
     result = col.trends.find()
     return MongoJSONEncoder().encode(list(result))
-
-uvicorn.run(
-        "server.app:app",
-        host = "0.0.0.0",
-        port = 8000,
-        reload = True
-    )
