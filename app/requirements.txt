@@ -5,3 +5,4 @@ pymongo
 flask
 schedule
 fastapi
+motor
