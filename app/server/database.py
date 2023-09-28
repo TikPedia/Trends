@@ -1,18 +1,12 @@
 from bson.objectid import ObjectId
 import motor.motor_asyncio
 
-MONGO_DETAILS = "mongodb://localhost:27017"
-
+MONGO_DETAILS = "mongodb://mongodb:27017"
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
-
-database = client.trends
-
+database = client.tikpedia
 trends_collection = database.get_collection("trends")
 
-
 # helpers
-
-
 def trend_helper(trend) -> dict:
     return {
         "id": str(trend["_id"]),

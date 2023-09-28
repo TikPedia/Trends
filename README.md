@@ -1,34 +1,5 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Trends" />
-
-  &#xa0;
-
-  <!-- <a href="https://trends.netlify.app">Demo</a> -->
-</div>
 
 <h1 align="center">Trends</h1>
-
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8">
-
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/trends?color=56BEB8" /> -->
-</p>
-
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Trends 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -37,7 +8,6 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
 </p>
 
 <br>
@@ -48,46 +18,49 @@ Microservice used to extract the most researched terms on Google using pytrends 
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Add trends in the Mongodb base ;\
+:heavy_check_mark: Show trends from the Mongodb base;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
 - [Python](https://www.python.org/downloads/release/python-3110/)
-
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Docker](https://www.docker.com/) and [Python](https://www.python.org/downloads/release/python-3110/) installed.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/trends
+$ git clone https://github.com/TikPedia/Trends
 
 # Access
 $ cd trends
 
-# Install dependencies
-$ yarn
+# Dockerisation
+$ docker compose up
 
-# Run the project
-$ yarn start
+# Run the docker
 
-# The server will initialize in the <http://localhost:3000>
+# The server (Front/API) will initialize in the <http://localhost:8081/>
+# The server (DB/Mongodb) will initialize in the <mongodb://127.0.0.1:27017>
 
+# Route for add in the trends in the mongodb <http://localhost:8081/>
+# Route for look all the data in the mondogb base <http://localhost:8081/trend/>
 
-$MongoDB run docker
-
-docker compose up
-
-# Connection : mongodb://127.0.0.1:27017
 ```
 
+## :memo: License ##
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+
+
+Made with :heart: by <a href="https://github.com/thegostisdead" target="_blank">Thegostisdead</a>, <a href="https://github.com/ltournayre" target="_blank">LTournayre</a>, <a href="https://github.com/TaviotBaptiste" target="_blank">TaviotBaptiste</a>,
 
 &#xa0;
 

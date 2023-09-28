@@ -13,9 +13,9 @@ services:
     restart: unless-stopped
     networks:
       - backend
-  back:
-    build: ./back
-    container_name: back
+  app:
+    build: ./app
+    container_name: app
     restart: always
     ports:
       - 8081:8000

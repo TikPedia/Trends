@@ -9,10 +9,7 @@ from server.models.trend import (
     ResponseModel,
     Trend,
 )
-
 router = APIRouter()
-
-
 @router.get("/", response_description="Trends retrieved")
 async def get_trends():
     trends = await retrieve_trends()
