@@ -3,18 +3,17 @@ from pytrends.request import TrendReq
 from pymongo import MongoClient
 from datetime import datetime as Date
 import motor.motor_asyncio
-
-
 from server.routes.trend import router as TrendRouter
 
 app = FastAPI()
 
 app.include_router(TrendRouter, tags=["Trend"], prefix="/trend")
 
-country = 'france'
+COUNTRY = 'france'
+
 def get_trends():
     pytrend = TrendReq()
-    trendingtoday = pytrend.trending_searches(pn=country)
+    trendingtoday = pytrend.trending_searches(pn=COUNTRY)
     trendingtoday = trendingtoday.head(10)
     listTrend = list(trendingtoday[0])
     # Data to be written

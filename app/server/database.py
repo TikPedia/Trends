@@ -13,7 +13,7 @@ def trend_helper(trend) -> dict:
         "keyword": trend["keyword"]
     }
 
-# Retrieve all students present in the database
+
 async def retrieve_trends():
     trends = []
     async for trend in trends_collection.find():

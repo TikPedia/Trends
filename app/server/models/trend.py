@@ -1,7 +1,7 @@
 from typing import Optional
 from typing import List
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel
 
 class Trend(BaseModel):
     keyword: List[str] = []
