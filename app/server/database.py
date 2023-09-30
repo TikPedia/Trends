@@ -1,7 +1,7 @@
-from bson.objectid import ObjectId
 import motor.motor_asyncio
 
-MONGO_DETAILS = "mongodb://mongodb:27017"
+MONGO_DETAILS = "mongodb://127.0.0.1:27017"
+
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.tikpedia
 trends_collection = database.get_collection("trends")
@@ -13,9 +13,11 @@ def trend_helper(trend) -> dict:
         "keyword": trend["keyword"]
     }
 
-
 async def retrieve_trends():
-    trends = []
-    async for trend in trends_collection.find():
-        trends.append(trend_helper(trend))
-    return trends
+    cursor = trends_collection.find({})
+    docs = await cursor.to_list(length=999)
+    return docs
+
+async def create_trends(document):
+    return await trends_collection.insert_one(document)
+
